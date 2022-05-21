@@ -1,7 +1,10 @@
-/* .App {
+.App {
   text-align: center;
 }
-
+body {
+  --twitter-color: #50b7f5;
+  --twitter-background: #e6ecf0;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,16 +38,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
-body {
-  --twitter-color: #50b7f5;
-  --twitter-background: #e6ecf0;
-}
-.app {
-  display: flex;
-  height: 100vh;
-  max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 10px;
 }

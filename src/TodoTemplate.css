@@ -1,0 +1,25 @@
+.TodoTemplate {
+  width: 512px;
+  min-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.app-title {
+  background-color: var(--twitter-color) !important;
+  color: white;
+  height: 4rem;
+  font-size: 1.5rem;
+  display: flex;
+  /* 크로스 축에서 아이템 정렬  */
+  align-items: center;
+  /* 메인 축에서 아이템 정렬 */
+  justify-content: center;
+}
+
+.content {
+  background-color: white;
+}
