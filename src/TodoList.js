@@ -7,7 +7,7 @@ const TodoList = ({ todos, onRemove }) => {
       {todos.map((todo) => (
         <TodoListItem
           todo={todo}
-          key={todo.id}
+          key={todo.user_key}
           onRemove={onRemove}
         ></TodoListItem>
       ))}

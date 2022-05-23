@@ -7,22 +7,22 @@ import { useCallback, useRef, useState } from "react";
 const App = () => {
   const [todos, setTodos] = useState([
     {
-      id: 1,
-      text: "리액트 기초",
-      displayName: "sonny jw",
-      username: "ssssangha",
+      user_key: 1,
+      createdDate: "리액트 기초",
+      nickname: "sonny jw",
+      login_id: "ssssangha",
     },
     {
-      id: 2,
-      text: "리액트 중급",
-      displayName: "sonny jw",
-      username: "ssssangha",
+      user_key: 2,
+      createdDate: "리액트 중급",
+      nickname: "sonny jw",
+      login_id: "ssssangha",
     },
     {
-      id: 3,
-      text: "리액트 고급",
-      displayName: "sonny jw",
-      username: "ssssangha",
+      user_key: 3,
+      createdDate: "리액트 고급",
+      nickname: "sonny jw",
+      login_id: "ssssangha",
     },
   ]);
 
@@ -30,7 +30,7 @@ const App = () => {
   const onInsert = useCallback(
     (text) => {
       const todo = {
-        id: nextId.current,
+        user_key: nextId.current,
         text,
       };
       setTodos(todos.concat(todo));
@@ -40,8 +40,8 @@ const App = () => {
   );
 
   const onRemove = useCallback(
-    (id) => {
-      setTodos(todos.filter((todo) => todo.id !== id));
+    (user_key) => {
+      setTodos(todos.filter((todo) => todo.user_key !== user_key));
     },
     [todos]
   );
