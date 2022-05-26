@@ -1,0 +1,35 @@
+.TodoTemplate {
+  width: 560px;
+  /*min-width: fit-content;*/
+  margin-left: 340px;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.app-title {
+  background-color: white;
+  color: #0f1419;
+  height: 4rem;
+  font-size: 19px;
+  font-weight: bold;
+  margin-left: 17px;
+  display: left;
+  /* 크로스 축에서 아이템 정렬  */
+  align-items: center;
+  /* 메인 축에서 아이템 정렬 */
+  justify-content: center;
+}
+
+.title-star {
+  width: 20px !important;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+  margin-left: 490px;
+}
+
+.content {
+  background-color: white;
+}
