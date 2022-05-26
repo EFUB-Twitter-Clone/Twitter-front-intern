@@ -1,0 +1,57 @@
+.TodoInsert {
+  /* display: flex;
+  background-color: aqua; */
+
+  border-bottom: 8px solid var(--twitter-background);
+  padding-right: 10px;
+  margin-top: -35px;
+}
+/* .TodoInsert > input {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: white;
+  flex: 1;
+} */
+.TodoInsert > form {
+  display: flex;
+  flex-direction: column;
+}
+.TodoInsert__input {
+  padding: 10px;
+  display: flex;
+}
+.TodoInsert__input > input {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 19px;
+  border: none;
+}
+.TodoInsert__icons {
+  padding-bottom: 10px;
+}
+.TodoInsert__icon {
+  display: flex;
+  margin-left: 67px;
+  margin-top: 29px;
+}
+
+.TodoInsert__Button {
+  outline: none;
+  border: none;
+  width: 90px;
+  height: 35px;
+  padding-bottom: 2px;
+  background-color: var(--twitter-color) !important;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 455px;
+  margin-top: -30px;
+  border-radius: 30px;
+  float: left;
+}
