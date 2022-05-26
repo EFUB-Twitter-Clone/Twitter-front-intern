@@ -11,16 +11,14 @@ import axios from "axios";
 const App = () => {
   const [todos, setTodos] = useState([]);
 
-  useEffect(() => {
-    getData();
-  });
 
   const getData = () => {
     axios
       .get(`/posts`)
       .then(function (response) {
         if (response.status === 200) {
-          console.log("전체 게시글 받아오기 성공", response);
+
+          console.log("전체 게시글 받아오기 성공", response.data);
 
           setTodos(response.data);
         } else {
@@ -35,14 +33,22 @@ const App = () => {
       });
   };
 
+  useEffect(() => {
+    getData();
+  }, []);
+
   console.log(todos);
+
+  console.log(todos[0]);
 
   const nextId = useRef(4); //이거 추가안했더니 리스트에 아이템 영구 지속안됨 뭘까
   const onInsert = useCallback(
-    (text) => {
+    (content, createdDate) => {
       const todo = {
-        user_key: nextId.current,
-        text,
+        id: nextId.current,
+        content,
+        createdDate,
+
       };
       setTodos(todos.concat(todo));
       nextId.current += 1;
@@ -51,8 +57,10 @@ const App = () => {
   );
 
   const onRemove = useCallback(
-    (user_key) => {
-      setTodos(todos.filter((todo) => todo.user_key !== user_key));
+
+    (id) => {
+      setTodos(todos.filter((todo) => todo.id !== id));
+
     },
     [todos]
   );
