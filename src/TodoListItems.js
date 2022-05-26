@@ -19,14 +19,18 @@ const TodoListItem = ({ todo, onRemove }) => {
         <div className="TodoListItem__header">
           <div className="TodoListItem__headerText">
             <h3>
+
               {todo.id}{" "}
               <span className="TodoListItem__headerSpecial">
                 {todo.nickname} {todo.createdDate}
+
               </span>
             </h3>
           </div>
           <div className="TodoListItem__headerDescription">
+
             <p>{todo.content}</p>{" "}
+
           </div>
 
           <div className="TodoListItem__footer">
@@ -34,7 +38,9 @@ const TodoListItem = ({ todo, onRemove }) => {
             <RepeatIcon fontSize="small" />
             <FavoriteBorderIcon fontSize="small" />
             <PublishIcon fontSize="small" />{" "}
+
             <div className="remove" onClick={() => onRemove(todo.id)}>
+
               <DeleteForeverIcon />
             </div>
           </div>

@@ -11,11 +11,13 @@ import axios from "axios";
 const App = () => {
   const [todos, setTodos] = useState([]);
 
+
   const getData = () => {
     axios
       .get(`/posts`)
       .then(function (response) {
         if (response.status === 200) {
+
           console.log("전체 게시글 받아오기 성공", response.data);
 
           setTodos(response.data);
@@ -30,6 +32,7 @@ const App = () => {
         console.log(todos);
       });
   };
+
   useEffect(() => {
     getData();
   }, []);
@@ -45,6 +48,7 @@ const App = () => {
         id: nextId.current,
         content,
         createdDate,
+
       };
       setTodos(todos.concat(todo));
       nextId.current += 1;
@@ -53,8 +57,10 @@ const App = () => {
   );
 
   const onRemove = useCallback(
+
     (id) => {
       setTodos(todos.filter((todo) => todo.id !== id));
+
     },
     [todos]
   );
