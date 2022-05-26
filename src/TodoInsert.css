@@ -1,9 +1,10 @@
 .TodoInsert {
   /* display: flex;
   background-color: aqua; */
-  padding-bottom: 10px;
+
   border-bottom: 8px solid var(--twitter-background);
   padding-right: 10px;
+  margin-top: -35px;
 }
 /* .TodoInsert > input {
   background: none;
@@ -20,40 +21,37 @@
   flex-direction: column;
 }
 .TodoInsert__input {
-  padding: 20px;
+  padding: 10px;
   display: flex;
 }
 .TodoInsert__input > input {
   flex: 1;
-  margin-left: 20px;
-  font-size: 20px;
+  margin-left: 10px;
+  font-size: 19px;
   border: none;
 }
 .TodoInsert__icons {
-  display: flex;
-
   padding-bottom: 10px;
 }
 .TodoInsert__icon {
   display: flex;
-  margin-left: 30px;
-  margin-top: 30px;
-  justify-content: space-around;
-  width: 130px;
+  margin-left: 67px;
+  margin-top: 29px;
 }
 
-button {
+.TodoInsert__Button {
   outline: none;
   border: none;
+  width: 90px;
+  height: 35px;
+  padding-bottom: 2px;
   background-color: var(--twitter-color) !important;
   color: white;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 1.5rem;
-  font-weight: 900 !important;
+  font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
-  margin-top: 20px !important;
-  margin-left: auto !important;
-  margin-right: 5px;
+  margin-left: 455px;
+  margin-top: -30px;
   border-radius: 30px;
+  float: left;
 }
