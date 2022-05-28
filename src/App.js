@@ -7,6 +7,8 @@ import TodoTemplate from "./TodoTemplate";
 import TodoInsert from "./TodoInsert";
 import TodoList from "./TodoList";
 import axios from "axios";
+import moment from "moment";
+import "moment/locale/ko";
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -34,17 +36,17 @@ const App = () => {
     getData();
   }, []);
 
-  console.log(todos);
-
-  console.log(todos[0]);
+  console.log(moment());
 
   const nextId = useRef(4); //이거 추가안했더니 리스트에 아이템 영구 지속안됨 뭘까
+
   const onInsert = useCallback(
-    (content, createdDate) => {
+    (content, createdDate, nickname) => {
       const todo = {
         id: nextId.current,
+        nickname: "fub2fub",
         content,
-        createdDate,
+        createdDate: "2022-05-28T23:39:06",
       };
       setTodos(todos.concat(todo));
       nextId.current += 1;
@@ -58,6 +60,7 @@ const App = () => {
     },
     [todos]
   );
+  //todo.id!==id 만족하는 것만 todo로 받아서 todos에 넣음
 
   return (
     <div>

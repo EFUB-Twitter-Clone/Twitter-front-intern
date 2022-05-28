@@ -7,6 +7,7 @@ import RepeatIcon from "@mui/icons-material/Repeat";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PublishIcon from "@mui/icons-material/Publish";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+
 const TodoListItem = ({ todo, onRemove }) => {
   return (
     <div className="TodoListItem">
@@ -19,7 +20,7 @@ const TodoListItem = ({ todo, onRemove }) => {
         <div className="TodoListItem__header">
           <div className="TodoListItem__headerText">
             <h3>
-              {todo.id}{" "}
+              {todo.id}
               <span className="TodoListItem__headerSpecial">
                 {todo.nickname} {todo.createdDate}
               </span>
