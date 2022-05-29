@@ -7,42 +7,38 @@ import TodoTemplate from "./TodoTemplate";
 import TodoInsert from "./TodoInsert";
 import TodoList from "./TodoList";
 import axios from "axios";
+import moment from "moment";
+import "moment/locale/ko";
 
 const App = () => {
   const [todos, setTodos] = useState([]);
-
-  useEffect(() => {
-    getData();
-  });
 
   const getData = () => {
     axios
       .get(`/posts`)
       .then(function (response) {
-        if (response.status === 200) {
-          console.log("전체 게시글 받아오기 성공", response);
-
-          setTodos(response.data);
-        } else {
-          console.log("전체 게시글 데이터 받아오기 실패");
-        }
+        setTodos(response.data);
       })
       .catch(function (error) {
         console.log(error);
-      })
-      .then(function () {
-        console.log(todos);
       });
   };
 
-  console.log(todos);
+  useEffect(() => {
+    getData();
+  }, []);
+
+  console.log("투두", todos[1]);
 
   const nextId = useRef(4); //이거 추가안했더니 리스트에 아이템 영구 지속안됨 뭘까
   const onInsert = useCallback(
-    (text) => {
+    (content, createdDate) => {
       const todo = {
-        user_key: nextId.current,
-        text,
+        id: nextId.current,
+        login_id: "퍼비",
+        nickname: "fub2fub",
+        content,
+        createdDate: moment(),
       };
       setTodos(todos.concat(todo));
       nextId.current += 1;
@@ -51,8 +47,8 @@ const App = () => {
   );
 
   const onRemove = useCallback(
-    (user_key) => {
-      setTodos(todos.filter((todo) => todo.user_key !== user_key));
+    (id) => {
+      setTodos(todos.filter((todo) => todo.id !== id));
     },
     [todos]
   );

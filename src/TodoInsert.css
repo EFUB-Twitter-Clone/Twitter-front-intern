@@ -2,10 +2,23 @@
   /* display: flex;
   background-color: aqua; */
 
-  border-bottom: 8px solid var(--twitter-background);
+  border-bottom: 1px solid var(--twitter-background);
   padding-right: 10px;
   margin-top: -35px;
 }
+
+.TweetNum {
+  padding-right: 10px;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  color: #1d9bf0;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 1px solid var(--twitter-background);
+}
+
 /* .TodoInsert > input {
   background: none;
   outline: none;
@@ -24,6 +37,11 @@
   padding: 10px;
   display: flex;
 }
+
+input:focus {
+  outline: none;
+}
+
 .TodoInsert__input > input {
   flex: 1;
   margin-left: 10px;
@@ -45,13 +63,17 @@
   width: 90px;
   height: 35px;
   padding-bottom: 2px;
-  background-color: var(--twitter-color) !important;
+  background-color: var(--twitter-color);
   color: white;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   margin-left: 455px;
-  margin-top: -30px;
+  margin-top: -35px;
   border-radius: 30px;
   float: left;
+}
+
+.TodoInsert__Button:hover {
+  background-color: #1a8cd8;
 }

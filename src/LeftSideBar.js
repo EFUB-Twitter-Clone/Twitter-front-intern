@@ -145,7 +145,7 @@ const UserContainer = styled.div`
   display: flex;
   align-items: center;
   border-radius: 50px;
-  padding: 8px px;
+  padding: 8px 10px;
   cursor: pointer;
   &:hover {
     background-color: #eeeeee;
